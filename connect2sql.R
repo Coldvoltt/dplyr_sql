@@ -50,7 +50,7 @@ store |>
   inner_join(staff, by = 'store_id') |> 
   inner_join(payment, by = 'staff_id') |> 
   group_by(store_id) |> 
-  summarize(total_revenue = sum(customer_id)) |> 
+  summarize(total_revenue = sum(amount)) |> 
   head(5)
 
 
